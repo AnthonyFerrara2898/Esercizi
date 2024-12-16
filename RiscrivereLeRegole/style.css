@@ -1,0 +1,17 @@
+:root {
+  --coloresfondo: #0ae9e9;
+  --larghezza: 100px;
+  --altezza: 100px;
+  --sfondotesto: #ff8800;
+  --bordotesto: 80%;
+}
+body {
+  background-color: var(--coloresfondo);
+}
+
+.ball {
+  width: var(--larghezza);
+  height: var(--altezza);
+  background-color: var(--sfondotesto);
+  border-radius: var(--bordotesto);
+}
