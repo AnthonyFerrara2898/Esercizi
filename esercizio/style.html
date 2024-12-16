@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempi CSS</title>
+    <style>
+      div {
+        color: blue;
+      }
+      p {
+        color: red;
+      }
+      div > p {
+        color: green;
+      }
+      div ~ p {
+        color: purple;
+      }
+      div + p {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This text is red.</p>
+    <div>
+      <section>
+        <p>This text is red.</p>
+      </section>
+      <p>This text is green.</p>
+      <p>This text is green.</p>
+    </div>
+    <p>This text is orange.</p>
+    <p>This text is purple.</p>
+  </body>
+</html>

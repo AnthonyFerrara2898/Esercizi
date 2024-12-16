@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo di Registrazione Utente</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modulo di Registrazione Utente</h1>
+    <p><i>I campi con * sono Obbligatori</i></p>
+    <form action="../esercizio/esercizio3.html" method="post">
+      <table>
+        <tr>
+          <td><label for="nome-completo">Nome Completo*</label></td>
+          <td>
+            <input
+              type="text"
+              id="nome-completo"
+              name="nome_completo"
+              placeholder="Nome Completo"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="mail">E-mail*</label></td>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="E-mail"
+              placeholder="E-mail"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password">Password*</label></td>
+          <td>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Data di Nascita">Data di Nascita*</label></td>
+          <td>
+            <input
+              type="date"
+              id="data-di-nascita"
+              name="data-di-nascita"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="genere">Genere*</label></td>
+          <td>
+            <input
+              type="radio"
+              id="maschio"
+              name="genere"
+              value="Maschio"
+            /><label for="Maschio">Maschio</label>
+            <input
+              type="radio"
+              id="femmina"
+              name="genere"
+              value="Femmina"
+            /><label for="Femnina">Femmina</label>
+            <input type="radio" id="altro" name="genere" value="Altro" /><label
+              for="Altro"
+              >Altro</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><label for="colore-preferito">Colore Preferito</label></td>
+          <td>
+            <input type="color" id="colore-preferito" name="colore-preferito" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="telefono">Numero di Telefono*</label></td>
+          <td>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[0-9]{10}"
+              placeholder="333 333 3333"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="lingue-parlate">Lingue Parlate*</label></td>
+          <td>
+            <select
+              id="lingue-parlate"
+              name="lingue-parlate[]"
+              required
+              multiple
+            >
+              <option value="italiano">Italiano</option>
+              <option value="francese">Francese</option>
+              <option value="spagnolo">Spagnolo</option>
+              <option value="inglese">Inglese</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="abbonamento">Piano di Abbonamento*</label></td>
+          <td>
+            <select id="abbonamento" name="abbonamento" required>
+              <option value="free">Free</option>
+              <optgroup label="Premium">
+                <option value="premium1">Premium 1 (€9,99/mese)</option>
+                <option value="premium2">Premium 2 (€19,99/mese)</option>
+                <option value="premium3">Premium 3 (€29,99/mese)</option>
+              </optgroup>
+            </select>
+          </td>
+          <td><input type="checkbox" id="pro" name="pro" /></td>
+          <td><label for="pro">Piano Pro (€49,99/mese)</label></td>
+        </tr>
+
+        <tr>
+          <td><label for="textarea">Lascia un Commento</label></td>
+          <td>
+            <textarea id="textarea" name="textarea" rows="4"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" id="invio" name="invio" value="Invia" />
+          </td>
+        </tr>
+        <tr>
+          <td><button type="button" disabled>Solo per Piano Pro</button></td>
+        </tr>
+      </table>
+      <h2>Metodo di pagamento*</h2>
+      <table>
+        <tr>
+          <td><label for="metodo-di-pagamento"></label></td>
+          <td>
+            <select id="pagamento" name="pagamento" required>
+              <optgroup label="Scegli come pagare">
+                <option value="carta-di-credito">Carta di Credito</option>
+                <option value="carta-di-debito">Carta di Debito</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="numero_carta">Numero Carta*</label></td>
+          <td>
+            <input
+              type="number"
+              id="numero_carta"
+              name="numero_carta"
+              pattern="[0-9]{13,16}"
+              placeholder="1234 1234 1234 1234"
+              title="Il numero della carta può essere composto da 13 a 16 cifre"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="scadenza">Scadenza*</label></td>
+          <td><input type="month" id="scadenza" name="scadenza" required /></td>
+        </tr>
+        <tr>
+          <td><label for="cvc">CVC*</label></td>
+          <td>
+            <input
+              type="password"
+              id="cvc"
+              name="cvc"
+              pattern="[0-9]{3}"
+              placeholder="123"
+              title="Il cvc deve essere composto da 3 cifre"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="indirizzo_fatturazione"
+              >Indirizzo di Fatturazione*</label
+            >
+          </td>
+          <td>
+            <input
+              type="text"
+              id="indirizzo_fatturazione"
+              name="indirizzo_fatturazione"
+              placeholder="via Mario Rossi 4"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="range_number"
+              >Quante persone utilizzeranno l'abbonamento?</label
+            >
+          </td>
+          <td>
+            <input
+              type="number"
+              id="range_number"
+              name="range_number"
+              min="0"
+              max="100"
+              step="2"
+              autofocus
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="checkbox">Autorizzo al trattamento dei miei dati</label>
+          </td>
+          <td>
+            <input type="checkbox" id="checkbox" name="checkbox" checked />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="data_evento"
+              >Seleziona una data per venire a firmare<br />il contratto in
+              filiale</label
+            >
+          </td>
+          <td><input type="date" id="data_evento" name="data_evento" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
