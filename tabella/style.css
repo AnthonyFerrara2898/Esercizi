@@ -1,0 +1,40 @@
+/* Tabella */
+table {
+  border: 1px solid #263238;
+  width: 50%;
+}
+/* Titolo */
+caption {
+  color: #263238;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* header tabella */
+th {
+  background-color: #455a64;
+  color: white;
+  font-weight: 700;
+}
+/* righe dispari della tabella */
+tr:nth-child(odd) {
+  background-color: #eceff1;
+}
+/* righe pari della tabella */
+tr:nth-child(even) {
+  background-color: #b0bec5;
+}
+/* ultima riga tabella (totale) */
+tfoot {
+  font-weight: 800;
+  background-color: #78909c;
+}
+/* Colonne di Entrate ed Uscite*/
+td:nth-child(2) {
+  background-color: #003300;
+  text-align: right;
+}
+td:nth-child(3) {
+  background-color: #7f0000;
+  text-align: right;
+}
