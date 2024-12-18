@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar con Dropdown</title>
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <span class="navbar-brand">Navbar</span>
+        <ul class="navbar-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Dropdown &#9662;</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+            </ul>
+          </li>
+          <li class="disabled">Disabled</li>
+        </ul>
+        <form class="search-form">
+          <input type="text" class="search-input" placeholder="Search" />
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+    </nav>
+  </body>
+</html>
