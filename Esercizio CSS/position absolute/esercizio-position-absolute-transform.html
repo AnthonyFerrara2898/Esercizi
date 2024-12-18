@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio CSS</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      body {
+        background-color: lightgrey;
+      }
+
+      section {
+        text-align: center;
+        background-color: white;
+        margin: 0 auto;
+        width: 500px;
+        padding: 10px 0;
+      }
+
+      #red {
+        background-color: red;
+        position: fixed;
+        left: 0;
+        top: 0;
+        animation: mymovered 10s linear infinite;
+      }
+      #green {
+        background-color: green;
+        position: fixed;
+        right: 0;
+        top: 0;
+        animation: mymovegreen 10s linear infinite;
+      }
+      #blue {
+        background-color: blue;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        animation: mymoveblue 10s linear infinite;
+      }
+
+      #purple {
+        background-color: purple;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        animation: mymovepurple 10s linear infinite;
+      }
+
+      #footer {
+        background-color: #222222;
+        margin: 10px auto;
+      }
+
+      .text {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      @keyframes mymovepurple {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(calc(-100vw + 200px), 0);
+        }
+        50% {
+          transform: translate(calc(-100vw + 200px), calc(-100vh + 200px));
+        }
+        75% {
+          transform: translate(0, calc(-100vh + 200px));
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes mymoveblue {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(0, calc(-100vh + 200px));
+        }
+        50% {
+          transform: translate(calc(100vw - 200px), calc(-100vh + 200px));
+        }
+        75% {
+          transform: translate(calc(100vw - 200px), 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes mymovered {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(calc(100vw - 200px), 0);
+        }
+        50% {
+          transform: translate(calc(100vw - 200px), calc(100vh - 200px));
+        }
+        75% {
+          transform: translate(0, calc(100vh - 200px));
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes mymovegreen {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(0, calc(100vh - 200px));
+        }
+        50% {
+          transform: translate(calc(-100vw + 200px), calc(100vh - 200px));
+        }
+        75% {
+          transform: translate(calc(-100vw + 200px), 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Absolute Positioning 1</h1>
+    <section>
+      <div class="text" id="footer">Footer</div>
+    </section>
+    <div class="text" id="red">Red</div>
+    <div class="text" id="green">Green</div>
+    <div class="text" id="blue">Blue</div>
+    <div class="text" id="purple">Purple</div>
+  </body>
+</html>
