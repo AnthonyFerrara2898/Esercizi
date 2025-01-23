@@ -16,7 +16,6 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start; 
     text-align: center;
     padding: 20px;
@@ -37,15 +36,17 @@ body {
   #red {
     background-color: #ffcccc;
     order: 2;
+    text-align: left;
   }
   #orange {
     background-color: #ffe5cc;
     order: 4;
-    
+    padding-right: 300px;
   }
   #blue {
     background-color: #cce5ff;
     order: 5;
+    margin-right: 0px;
   }
   
   
@@ -59,20 +60,21 @@ body {
   
  
   ul {
-    list-style: none;
+    list-style: none; 
     padding: 0;
-    margin: 0;
-  }
-  
-  li {
+    margin: 0 auto; 
+    display: block; 
+    text-align: center;
+}
+
+li {
     background-color: white;
-    border: 1px solid #ccc;
-    width: 50px;
-    height: 30px;
-    display: flex;
-    align-items: center;
+    width: 40px; 
+    height: 45px;
+    margin: 13px auto; 
+    display: flex; 
+    align-items: center; 
     justify-content: center;
-    margin: 5px 0;
-    font-weight: bold;
-  }
+}
+
   
