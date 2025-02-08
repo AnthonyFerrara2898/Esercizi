@@ -31,7 +31,7 @@ const user = [
     callbackDue(filtrato);
   }
   function visualizza(array) {
-    array.forEach((x) => console.log(Nome: ${x.name}, età: ${x.age}));
+    array.forEach((x) => console.log(`Nome: ${x.name}, età: ${x.age}`));
   }
   processUserData(user, filterAndSortUsers, visualizza);
   
