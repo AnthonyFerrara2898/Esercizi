@@ -1,5 +1,8 @@
-function nicknameMap(persons) {
-    return persons.map(x => x.name + "-" + x.age)}
+// Implementare la funzione ageAverage che, dato un array di persone, calcola l'età media.
+
+function calculateAverageAge(persons) {
+   return persons.reduce ((acc, curr) => acc + curr.age, 0) / persons.length;
+  }
   
   const persons = [
     { name: 'Paul', age: 16 },
@@ -14,6 +17,7 @@ function nicknameMap(persons) {
     { name: 'Alice', age: 28 }
   ];
   
-  const nicknames = nicknameMap(persons);
+  const average = calculateAverageAge(persons);
   console.log(persons);
-  console.log(nicknames);
+  console.log(average); 
+

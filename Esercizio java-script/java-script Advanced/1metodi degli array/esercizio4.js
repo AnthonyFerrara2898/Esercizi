@@ -1,6 +1,8 @@
-function calculateAverageAge(persons) {
-   return persons.reduce ((acc, curr) => acc + curr.age, 0) / persons.length;
-  }
+// Implementare la funzione nicknameMap che, dato un array di persone, crea un array di nickname. 
+// Il nickname deve essere formato in questa modo: <name>-<age>.
+
+function nicknameMap(persons) {
+    return persons.map(x => x.name + "-" + x.age)}
   
   const persons = [
     { name: 'Paul', age: 16 },
@@ -15,7 +17,6 @@ function calculateAverageAge(persons) {
     { name: 'Alice', age: 28 }
   ];
   
-  const average = calculateAverageAge(persons);
+  const nicknames = nicknameMap(persons);
   console.log(persons);
-  console.log(average); 
-
+  console.log(nicknames);
