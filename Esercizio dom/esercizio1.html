@@ -22,9 +22,22 @@ Il tutto utilizzando tutte e 4 le proprietà viste nel video. -->
         <li>3</li>
     </ul>
     <script>
-        
+        // Seleziona l'elemento <ul>
+        const ul = document.querySelector("ul");
+
+        // 1. Stampa l'elemento padre di <ul>
+        console.log("Padre di <ul>:", ul.parentElement);
+
+        // 2. Stampa il secondo elemento figlio di <ul>
+        const secondoLi = ul.children[1];
+        console.log("Secondo elemento figlio di <ul>:", secondoLi);
+
+        // 3. Stampa l'elemento fratello successivo del secondo <li>
+        console.log("Fratello successivo del secondo <li>:", secondoLi.nextElementSibling);
+
+        // 4. Stampa l'elemento fratello precedente del secondo <li>
+        console.log("Fratello precedente del secondo <li>:", secondoLi.previousElementSibling);
     </script>
 </body>
 
 </html>
-
