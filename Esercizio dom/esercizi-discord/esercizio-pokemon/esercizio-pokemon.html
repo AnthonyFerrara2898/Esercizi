@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1638613067237-b1127ef06c00?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed; 
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 5px;
+        row-gap: 15px;
+        column-gap: 5px;
+    }
+
+    .card{
+        background-color: rgb(170, 217, 133);
+        max-width: 150px;
+        min-width: 180px;
+        min-height: 200px;
+        max-height: 250px;
+        border: 10px solid rgba(182, 178, 178, 0.637);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        border-image: linear-gradient(45deg, #ddd18b, #e76d52, #49834b, #80b6da) 1;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border: 5px solid rgba(182, 178, 178, 0.637);
+        border-radius: 10px;
+        background-color: rgba(217, 254, 208, 0.845);
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 5px;
+        width: fit-content;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    </style>
+</head>
+<body>
+     
+    <input type="text" class="type" id="type" placeholder="Tipo Pokemon" value="">
+    <button id="btn-type">Cerca tipo</button>
+    <select id="select-type">
+        <option value="Seleziona un tipo"></option>
+    </select>
+    <input type="text" class="pokemon" id="pokemon" placeholder="Nome Pokemon" value="">
+    <button id="btn">Cerca</button>
+    <button id="btn-order">Ordina A-Z</button>
+    
+    <script src="esercizio-pokemon.js"></script>
+</body>
+</html>

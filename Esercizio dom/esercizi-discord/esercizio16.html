@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const articoli = [
+        {
+          titolo: "Nuove tendenze nel web design",
+          descrizione: "Scopri le ultime novità nel mondo del design.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Design",
+          dataPubblicazione: "2022-05-15",
+        },
+        {
+          titolo: "Storia antica: segreti dei Romani",
+          descrizione: "Un viaggio nel tempo alla scoperta dell'antica Roma.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Storia",
+          dataPubblicazione: "2018-11-20",
+        },
+        {
+          titolo: "Introduzione ad AstroFisica",
+          descrizione: "Comprendere le basi dell'universo.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Scienza",
+          dataPubblicazione: "2021-02-10",
+        },
+        {
+          titolo: "Il Rinascimento del design italiano",
+          descrizione: "Esplora il rinascimento del design nel nostro paese.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Design",
+          dataPubblicazione: "2019-07-05",
+        },
+        {
+          titolo: "Misteri della storia medievale",
+          descrizione: "Analisi degli eventi che hanno segnato il Medioevo.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Storia",
+          dataPubblicazione: "2017-03-22",
+        },
+        {
+          titolo: "Innovazioni scientifiche del 21° secolo",
+          descrizione:
+            "Un sguardo alle scoperte che hanno rivoluzionato il nostro mondo.",
+          immagineUrl: "https://placehold.co/300x200",
+          categoria: "Scienza",
+          dataPubblicazione: "2023-01-12",
+        },
+      ];
+      const container = document.createElement("div");
+      container.setAttribute("id", "container")
+      document.body.appendChild(container);
+      articoli.forEach((articolo) => {
+        const card = document.createElement("div");
+        card.setAttribute("id", "card")
+        const titolo = document.createElement("h3");
+        titolo.setAttribute("id", "titolo")
+        titolo.textContent = articolo.titolo;
+        const descrizione = document.createElement("p");
+        descrizione.setAttribute("id", "descrizione")
+        descrizione.textContent = articolo.descrizione;;
+        const immagine = document.createElement("img");
+        immagine.src = articolo.immagineUrl;
+        immagine.alt = articolo.titolo;
+        const categoria = document.createElement("p");
+        categoria.textContent = articolo.categoria;
+        categoria.setAttribute("id", "categoria");
+        const data = document.createElement("p");
+        data.textContent = articolo.dataPubblicazione;
+        data.setAttribute("id", "data");
+        card.appendChild(titolo);
+        card.appendChild(immagine);
+        card.appendChild(descrizione);
+        card.appendChild(categoria);
+        card.appendChild(data);
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

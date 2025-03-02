@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">Cliccami</button>
+    <div id="listaContainer"></div>
+    <script>
+    let contatore = 0
+    const button = document.getElementById("button")
+    const lista = document.createElement("ul");
+    const frutta = ["banana", "kiwi", "mela", "arancia", "fragola"]
+    function creaLista(frutta){
+        contatore++
+        console.log(contatore)
+     frutta.forEach(x => {
+        const elemento = document.createElement("li") 
+        elemento.textContent = x 
+        lista.appendChild(elemento)
+        const div = document.querySelector("#listaContainer")
+        div.appendChild(lista) 
+        
+    });   
+    if (contatore === 3){
+        button.removeEventListener("click", utility)
+        
+    }
+    }
+    function utility(){
+        creaLista(frutta)
+    }
+    button.addEventListener("click", utility)
+    </script>
+</body>
+</html>
